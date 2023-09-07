@@ -1,6 +1,6 @@
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
-yum install nodejs -y
+dnf install nodejs -y
 cp backend.service /etc/systemd/system/backend.service
 
 useradd expense
@@ -17,7 +17,7 @@ systemctl enable backend
 systemctl start backend
 
 dnf install mysql -y
-mysql -h localhost -uroot -pExpenseApp@1 < /app/schema/backend.sql
+mysql -h mysql.vishuadapa.com -uroot -pExpenseApp@1 < /app/schema/backend.sql
 
 
 
