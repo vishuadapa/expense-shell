@@ -1,6 +1,6 @@
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
-dnf install nodejs -y
+yum install nodejs -y
 cp backend.service /etc/systemd/system/backend.service
 
 useradd expense
